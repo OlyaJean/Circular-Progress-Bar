@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width:100vw;
+    background-color: rgb(223, 237, 249);
+}
+.charts{position: relative;}
+
+.innerChart{
+    position: absolute;
+    left:15px;
+    top:15px;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    box-shadow: inset 3px 0 5px 1px rgba(0,0,0,0.2),
+    3px 5px 5px 1px rgba(255,255,255,0.5)
+    ;
+   
+}
+.outerChart{
+    width:180px;
+    height:180px;
+    border-radius: 50%;
+    box-shadow:3px 3px 5px 1px rgba(0,0,0,0.2),
+    0 0 5px 1px rgba(0,0,0,0.2),
+    3px 2px 5px 1px rgba(255,255,255,0.5)
+   
+
+}
+.innerChart span{color:gray;
+    position: relative;
+    left:60px;
+    top:60px
+}
+
+circle{
+   fill:none;
+    stroke:rgb(182, 153, 249);
+    stroke-dasharray: 520;
+    stroke-dashoffset: 520;
+    stroke-linecap: round;
+    animation: bar 2s linear forwards;
+}
+svg{position: absolute;
+}
+
+@keyframes bar{
+    100%{stroke-dashoffset: 140.4;}
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Circular Progress Bar</title>
+  </head>
+  <body>
+    <div class="charts">
+      <div class="innerChart"><span id="number"></span></div>
+      <div class="outerChart"></div>
+    </div>
+    <svg id="circ" width="180" height="180">
+      <circle r="82.5" cx="90" cy="90" stroke-width="15" />
+    </svg>
+
+    <script>
+      let number = document.getElementById("number");
+      let counter = 0;
+      setInterval(() => {
+        if (counter === 73) {
+          clearInterval();
+        } else {
+          counter += 1;
+          number.innerHTML = counter + "%";
+        }
+      }, 25);
+    </script>
+  </body>
+</html>
